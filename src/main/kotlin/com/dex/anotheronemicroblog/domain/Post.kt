@@ -18,11 +18,11 @@ data class Post(
     @Column(nullable = false)
     val creationDateTime: LocalDateTime = LocalDateTime.now(ZoneOffset.UTC),
     @Column(nullable = true)
-    val editionDateTime: LocalDateTime,
+    val editionDateTime: LocalDateTime?,
     @JoinColumn
     @ManyToOne(targetEntity = User::class, fetch = FetchType.LAZY, optional = false)
     val author: User,
     @JoinColumn
     @ManyToOne(targetEntity = User::class, fetch = FetchType.LAZY, optional = true)
-    val editor: User
+    val editor: User?
 )
