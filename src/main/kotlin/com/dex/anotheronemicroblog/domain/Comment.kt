@@ -6,7 +6,7 @@ import jakarta.persistence.*
 data class Comment (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int,
+    val id: Int?,
     @JoinColumn
     @ManyToOne(targetEntity = User::class, fetch = FetchType.LAZY, optional = false)
     val author: User,

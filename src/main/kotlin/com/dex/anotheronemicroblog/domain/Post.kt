@@ -8,7 +8,7 @@ import java.time.ZoneOffset
 data class Post(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int,
+    val id: Int?,
     @Column(nullable = false)
     val name: String,
     @Column(nullable = false)
