@@ -6,3 +6,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  security:
+    jwt:
+      secret: Proin0viverra0nisl0vitae0mattis0dignissim10Praesent0quis0lectus1
+      prefix: "Bearer "
+      access:
+        expiretion-time: 1
+      refresh:
+        expiration-time: 36
